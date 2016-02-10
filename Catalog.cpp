@@ -47,12 +47,15 @@ void Catalog::add_enrollment(Enroll & e)
         cerr << "Error in Catalog::add_enrollment()-- Student: "<< the_sid << " is not a valid student in Catalog" << endl;
     }
 
-    //check whether a course_id exists Catalog, and if not, call cerr << [your message here]
+    else if(courses.find(the_sid) == courses.end())
+        cerr << "The student and/or course are not in CAESAR" << endl; //check whether a course_id exists Catalog, and if not, call cerr << [your message here]
 
     else
     {
         enrollments.push_front(e);
     }
+
+
 }
 
 /* retrieve course from Catalog*/

@@ -40,7 +40,7 @@ double Student::compute_gpa()
 
 
     }
-    
+
 
     return sum / num_courses;
 }
